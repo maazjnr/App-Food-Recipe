@@ -6,43 +6,21 @@ import styles from "../SeeMore/SeeMoreStyle";
 import { LinearGradient } from "expo-linear-gradient";
 import { COLORS } from "../../Constants/Constants";
 import CatFood from "../../Components/CatFood/CatFood";
-
-const apiUrl =
-  "https://api.spoonacular.com/recipes/random?apiKey=dc08124ff78a4ea9855372247525457d&number=3";
+import CatFoodDetails from "../CatFood/[id]";
 
 const SeeMore = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((res) => {
-        setData(res.recipes);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log("Error fetching data:", error);
-        setLoading(false);
-      });
-  }, []);
 
   return (
-    <ScrollView contentContainerStyle={styles.headerContainer} >
-      <Text style={styles.exploreText}>Explore</Text>
-
-      <CatFood />
-
-
+    <ScrollView contentContainerStyle={styles.headerContainer}>
+      <CatFoodDetails />
     </ScrollView>
   );
 };
 
 export default SeeMore;
 
-
-
-{/* <View style={styles.container}>
+{
+  /* <View style={styles.container}>
 {
   data.map((element) => (
     <TouchableOpacity key={element.id}>
@@ -56,4 +34,25 @@ export default SeeMore;
     </TouchableOpacity>
   ) )
 }
-</View> */}
+</View> */
+}
+
+
+// const [data, setData] = useState([]);
+// const [loading, setLoading] = useState(true);
+
+// useEffect(() => {
+//   fetch(apiUrl)
+//     .then((response) => response.json())
+//     .then((res) => {
+//       setData(res.recipes);
+//       setLoading(false);
+//     })
+//     .catch((error) => {
+//       console.log("Error fetching data:", error);
+//       setLoading(false);
+//     });
+// }, []);
+
+// const apiUrl =
+//   "https://api.spoonacular.com/recipes/random?apiKey=dc08124ff78a4ea9855372247525457d&number=3";

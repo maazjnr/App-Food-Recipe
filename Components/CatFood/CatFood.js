@@ -9,8 +9,6 @@ import {
 import React, {useState} from "react";
 
 const CatFood = () => {
-
-
   
   return (
     <View
