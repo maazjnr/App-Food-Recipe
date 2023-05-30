@@ -9,7 +9,7 @@ const GetData = ({ endpoint, query}) => {
 
   const options = {
     method: "GET",
-    url: `https://api.spoonacular.com/recipes/random?apiKey=dc08124ff78a4ea9855372247525457d&number=3`,
+    url: `https://api.spoonacular.com/recipes/random?apiKey=dc08124ff78a4ea9855372247525457d&number=5`,
     params: {...query},
   };
 
