@@ -3,26 +3,25 @@ import React from "react";
 import CatFood from "../CatFood/CatFood";
 import { LinearGradient } from "expo-linear-gradient";
 import { COLORS, SIZES } from "../../Constants/Constants";
-import {
-  Ionicons,
-  MaterialIcons,
-  MaterialCommunityIcons,
-} from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import styles from "./TabStyle";
 import { ScrollView } from "react-native-gesture-handler";
 
 function TabButton({ name, activeTab, onHandleSearchType }) {
   return (
     <ScrollView>
-      <TouchableOpacity style={styles.btnContainer} onPress={onHandleSearchType}>
-      <LinearGradient
-        colors={[COLORS.primary, COLORS.primary, "orange"]}
-        style={styles.linearStyle}
+      <TouchableOpacity
+        style={styles.btnContainer}
+        onPress={onHandleSearchType}
       >
-        <Ionicons name="fast-food" size={20} color={COLORS.lightWhite} />
-        <Text style={styles.btnText}>{name}</Text>
-      </LinearGradient>
-    </TouchableOpacity>
+        <LinearGradient
+          colors={[COLORS.primary, COLORS.primary, "orange"]}
+          style={styles.linearStyle}
+        >
+          <Ionicons name="fast-food" size={20} color={COLORS.lightWhite} />
+          <Text style={styles.btnText}>{name}</Text>
+        </LinearGradient>
+      </TouchableOpacity>
     </ScrollView>
   );
 }

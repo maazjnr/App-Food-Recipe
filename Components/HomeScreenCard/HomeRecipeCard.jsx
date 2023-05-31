@@ -2,7 +2,6 @@ import { View, Text, Image} from "react-native";
 import React, { useState, useEffect } from "react";
 import { FlatList } from "react-native-gesture-handler";
 import { TouchableOpacity } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import styles from "./HomeCardStyle";
 
@@ -37,7 +36,7 @@ const HomeRecipeCard = () => {
 
   return (
     <View>
-      {/* <FlatList
+      <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
         data={data}
@@ -57,7 +56,7 @@ const HomeRecipeCard = () => {
             </TouchableOpacity>
           </View>
         )}
-      /> */}
+      />
     </View>
   );
 };
