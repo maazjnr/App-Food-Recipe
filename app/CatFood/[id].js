@@ -9,6 +9,7 @@ import { ScrollView } from "react-native-gesture-handler";
 const tabs = ["Africa", "Chinese", "Italian"];
 
 const CatFoodDetails = () => {
+  
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   const displayTabData = () => {
@@ -28,21 +29,19 @@ const CatFoodDetails = () => {
   };
 
   return (
-
-     <ScrollView>
-     <View
+    <ScrollView>
+      <View
         style={{
           flexDirection: "row",
           justifyContent: "center",
-          padding: 20
+          padding: 20,
         }}
       >
         <Tabs tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
       </View>
 
       {displayTabData()}
-     </ScrollView>
-
+    </ScrollView>
   );
 };
 
