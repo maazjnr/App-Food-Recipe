@@ -6,6 +6,8 @@ const styles = StyleSheet.create({
     padding: SIZES.xSmall,
     color: COLORS.gray,
     flexDirection: "row",
+    paddingBottom: SIZES.xLarge * 1.5,
+    paddingTop: SIZES.xLarge * 1.5
   },
 
   inputText: {
@@ -13,7 +15,7 @@ const styles = StyleSheet.create({
     borderColor: COLORS.primary,
     padding: SIZES.xSmall,
     width: '80%',
-    borderRadius: SIZES.xSmall,
+    borderRadius: SIZES.xLarge ,
     height: SIZES.large * 3,
     marginBottom: SIZES.xSmall * 2,
     marginRight: SIZES.xSmall * 2,
@@ -22,7 +24,7 @@ const styles = StyleSheet.create({
   headerImage: {
     width: 60,
     height: 60,
-    borderRadius: SIZES.xSmall,
+    borderRadius: 60,
   },
 });
 

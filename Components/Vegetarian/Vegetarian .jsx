@@ -40,7 +40,7 @@ const Vegetarian = () => {
 
   return (
     <View>
-      {/* <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {data.map((item) => (
           <TouchableOpacity key={item.id} style={styles.cardBtn}>
             <Image
@@ -62,7 +62,7 @@ const Vegetarian = () => {
             </View>
           </TouchableOpacity>
         ))}
-      </ScrollView> */}
+      </ScrollView>
     </View>
   );
 };

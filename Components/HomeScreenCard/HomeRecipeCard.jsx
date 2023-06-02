@@ -36,7 +36,7 @@ const HomeRecipeCard = () => {
 
   return (
     <View>
-      {/* <FlatList
+      <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
         data={data}
@@ -56,7 +56,7 @@ const HomeRecipeCard = () => {
             </TouchableOpacity>
           </View>
         )}
-      /> */}
+      />
     </View>
   );
 };

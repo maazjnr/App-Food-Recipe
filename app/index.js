@@ -12,7 +12,7 @@ export default function Page() {
     <Tab.Navigator screenOptions={{
       headerShadowVisible: false,
       headerTintColor: '#FFFFFF',
-      headerStatusBarHeight: 80,
+      headerStatusBarHeight: 60,
     }}>
       <Tab.Screen
        name="HomeScreen" options={{

@@ -16,10 +16,10 @@ const Chinese = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
-      {isLoading ? (
+      {/* {isLoading ? (
         <ActivityIndicator size="large" color="#000" />
       ) : error ? (
-        <Text>TGere's an error trying to fetchData</Text>
+        <Text>There's an error trying to fetchData</Text>
       ) : (
         data?.map((item) => (
           <TouchableOpacity style={styles.foodBtn} key={item.id}>
@@ -31,7 +31,7 @@ const Chinese = () => {
             />
           </TouchableOpacity>
         ))
-      )}
+      )} */}
     </ScrollView>
   );
 };
