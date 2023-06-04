@@ -1,21 +1,10 @@
 import { StyleSheet } from "react-native";
-import { SIZES, COLORS } from "../../../Constants/Constants";
+import { SIZES, COLORS } from "../../../../Constants/Constants";
 const styles = StyleSheet.create({
-
-    scrollContainer: {
-        flexGrow: 2,
-        justifyContent: "center",
-        alignItems: "center",
-        alignContent: "center",
-    },
-
-    foodBtn: {
-        marginBottom: SIZES.xSmall
-    },
     
     cardImage: {
-        width: 400,
-        height: 220,
+        width: 200,
+        height: 150,
         borderRadius: SIZES.small,
     },
 
@@ -30,8 +19,7 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         color: COLORS.primary,
         padding: SIZES.small,
-        flexWrap: "nowrap",
-        textAlign: "center"
+        flexWrap: "nowrap"
     },
 
     cardBtn: {
