@@ -10,32 +10,33 @@ import Recipes from "../../Components/Recipes/Recipes";
 import Healthy from "../../Components/Healthy/Healthy";
 
 const HomeScreen = () => {
-
   const router = useRouter();
 
   return (
     <View style={styles.container}>
+      <ScrollView>
+        <View style={styles.recContain}>
+          <Text style={styles.RecipeText}>Healthy Plan</Text>
+          <TouchableOpacity onPress={() => router.push("/app/RecipeDetails/")}>
+            <Text
+              onPress={() => router.push("../SeeMore/SeeMore")}
+              style={styles.seeMoreText}
+            >
+              See more
+            </Text>
+          </TouchableOpacity>
+        </View>
 
-    <ScrollView>
+        <Healthy />
 
-    <View style={styles.recContain}>
-      <Text style={styles.RecipeText}>Healthy Plan</Text>
-      <TouchableOpacity onPress={() => router.push('/app/RecipeDetails/') }>
-      <Text onPress={() => router.push('../SeeMore/SeeMore')} style={styles.seeMoreText}>See more</Text>
-      </TouchableOpacity>
-      </View>
-      
-      <Healthy />
-
-      {/* <Text style={styles.RecipeText}>Recommended for you</Text>
+        {/* <Text style={styles.RecipeText}>Recommended for you</Text>
       <PopularFood />
 
       <Text style={styles.RecipeText}>Vegetarian</Text>
       <Vegetarian /> */}
 
-      {/* <Recipes /> */}
-    </ScrollView>
-
+        {/* <Recipes /> */}
+      </ScrollView>
     </View>
   );
 };

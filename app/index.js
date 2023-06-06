@@ -1,22 +1,45 @@
-import { StyleSheet, Text, View } from "react-native";
-import TabNav from "../Navigation/TabNav";
-import HomeScreen from "./Screens/HomeScreen";
+import React from "react";
+import { StyleSheet, View } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import TabNav from "../Navigation/TabNav";
+import HomeScreen from "./Screens/HomeScreen";
 import HomeHeader from "../Components/common/HomeHeader";
-const Tab = createBottomTabNavigator();
 import { Feather, MaterialIcons, FontAwesome } from "@expo/vector-icons";
 import Favorite from "./Screens/Favourite/Favorite";
 import Profile from "./Screens/Profile/Profile";
+import RecipeDetails from "./recipe-details/RecipeDetails";
+
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
+const MainScreens = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{
+          header: () => <HomeHeader />,
+        }}
+      />
+      <Stack.Screen
+        name="RecipeDetails"
+        options={{
+          header: () => false,
+        }}
+        component={RecipeDetails}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export default function Page() {
   return (
     <Tab.Navigator
       screenOptions={{
         headerShadowVisible: false,
-        headerTintColor: "#FFFFFF",
-        headerStatusBarHeight: 60,
-        tabBarStyle: { borderTopWidth: 0 },
+        headerShown: false,
       }}
     >
       <Tab.Screen
@@ -31,10 +54,9 @@ export default function Page() {
               />
             </View>
           ),
-          headerLeft: () => <HomeHeader />,
           tabBarLabel: () => null,
         }}
-        component={HomeScreen}
+        component={MainScreens}
       />
 
       <Tab.Screen
@@ -50,7 +72,6 @@ export default function Page() {
             </View>
           ),
           tabBarLabel: () => null,
-          header: () => null,
         }}
         component={Favorite}
       />
@@ -68,32 +89,9 @@ export default function Page() {
             </View>
           ),
           tabBarLabel: () => null,
-          header: () => null,
         }}
         component={Profile}
       />
     </Tab.Navigator>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    padding: 24,
-  },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
-  },
-  title: {
-    fontSize: 64,
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: 36,
-    color: "#38434D",
-  },
-});

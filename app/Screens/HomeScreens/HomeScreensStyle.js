@@ -5,7 +5,8 @@ const styles = StyleSheet.create({
     padding: SIZES.xSmall,
     flex: 1,
     backgroundColor: COLORS.lightWhite,
-    marginBottom: SIZES.xLarge
+    marginBottom: SIZES.xLarge,
+    marginTop: -40
   },
 
   RecipeText: {
@@ -25,7 +26,6 @@ const styles = StyleSheet.create({
   recContain: {
     flexDirection: 'row',
     justifyContent: "space-between",
-    marginTop: 20
   }
 });
 

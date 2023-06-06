@@ -7,15 +7,15 @@ const styles = StyleSheet.create({
     color: COLORS.gray,
     flexDirection: "row",
     paddingBottom: SIZES.xLarge * 1.5,
-    paddingTop: SIZES.xLarge * 1.5
+    paddingTop: SIZES.xLarge * 1.5,
   },
 
   inputText: {
     borderWidth: 1,
     borderColor: COLORS.primary,
     padding: SIZES.xSmall,
-    width: '80%',
-    borderRadius: SIZES.xLarge ,
+    width: "80%",
+    borderRadius: SIZES.xLarge,
     height: SIZES.large * 3,
     marginBottom: SIZES.xSmall * 2,
     marginRight: SIZES.xSmall * 2,
