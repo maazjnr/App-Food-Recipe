@@ -9,6 +9,8 @@ import { Feather, MaterialIcons, FontAwesome } from "@expo/vector-icons";
 import Favorite from "./Screens/Favourite/Favorite";
 import Profile from "./Screens/Profile/Profile";
 import RecipeDetails from "./recipe-details/RecipeDetails";
+import SeeMore from "./SeeMore/SeeMore";
+import { COLORS, SIZES } from "../Constants/Constants";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -26,9 +28,27 @@ const MainScreens = () => {
       <Stack.Screen
         name="RecipeDetails"
         options={{
-          header: () => false,
+          // header: () => false,
+          headerTitleStyle: {
+            color: COLORS.primary,
+            fontSize: SIZES.large - 3,
+          },
+
+          headerStyle: {
+            backgroundColor: "#000",
+          },
+
+          headerTintColor: COLORS.primary,
         }}
         component={RecipeDetails}
+      />
+
+      <Stack.Screen
+        name="Seemore"
+        options={{
+          header: () => false,
+        }}
+        component={SeeMore}
       />
     </Stack.Navigator>
   );

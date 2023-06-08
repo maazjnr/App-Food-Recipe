@@ -1,29 +1,12 @@
 import { StyleSheet } from "react-native";
 import { SIZES, COLORS } from "../../Constants/Constants";
 const styles = StyleSheet.create({
-    
-    cardImage: {
-        width: 200,
-        height: 150,
-        borderRadius: SIZES.small,
-    },
 
-    textContainer: {
-        flexDirection: 'row',
-        justifyContent: "space-between",
-        alignItems: "center"
-    },
-
-    titleText: {
-        fontSize: SIZES.xSmall * 1.5,
-        fontWeight: "600",
+    errorText: {
         color: COLORS.primary,
-        padding: SIZES.small,
-        flexWrap: "nowrap"
-    },
-
-    cardBtn: {
-        paddingEnd: SIZES.xSmall
+        textAlign: "center",
+        marginTop: SIZES.xxLarge,
+        fontSize: SIZES.xxLarge - 15
     }
 
 });

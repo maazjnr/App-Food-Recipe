@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         alignContent: "center",
-        marginTop: SIZES.large * 2
+        marginTop: SIZES.large * 2,
 
     },
     
@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
     },
 
     textContainer: {
-        flexDirection: 'row',
-        justifyContent: "space-between",
-        alignItems: "center"
+        justifyContent: "flex-start",
+        paddingHorizontal: SIZES.xxLarge - 10,
+        margin: 50
     },
 
     titleText: {
@@ -31,6 +31,28 @@ const styles = StyleSheet.create({
         textAlign: "center"
     },
 
+    summaryText: {
+        fontSize: SIZES.xSmall * 2,
+        fontWeight: "700",
+        color: COLORS.primary,
+        paddingVertical: SIZES.xSmall
+    },
+
+    summaryList: {
+        fontSize: SIZES.xSmall * 1.5,
+        color: COLORS.gray,
+        lineHeight: SIZES.xSmall * 2.5
+    },
+
+    ingredientText: {
+        color: COLORS.gray,
+        textAlign: "left",
+        marginBottom: SIZES.xSmall
+    },
+
+    htmlVeiwContainer: {
+        paddingHorizontal: SIZES.xSmall
+    }
 
 });
 

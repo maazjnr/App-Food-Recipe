@@ -2,7 +2,7 @@ import { View, Text, SafeAreaView, Image } from "react-native";
 import React, { useState, useEffect } from "react";
 import { FlatList, ScrollView } from "react-native-gesture-handler";
 import { TouchableOpacity } from "react-native";
-import styles from "../SeeMore/SeeMoreStyle";
+import styles from "./SeeMoreStyle";
 import { LinearGradient } from "expo-linear-gradient";
 import { COLORS } from "../../Constants/Constants";
 import CatFood from "../../Components/CatFood/CatFood";

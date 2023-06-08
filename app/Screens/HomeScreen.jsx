@@ -8,22 +8,20 @@ import Vegetarian from "../../Components/Vegetarian/Vegetarian ";
 import PopularFood from "../../Components/Popular/Popular";
 import Recipes from "../../Components/Recipes/Recipes";
 import Healthy from "../../Components/Healthy/Healthy";
+import { useNavigation } from "expo-router";
 
 const HomeScreen = () => {
-  const router = useRouter();
+  const nav = useNavigation();
 
   return (
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.recContain}>
           <Text style={styles.RecipeText}>Healthy Plan</Text>
-          <TouchableOpacity onPress={() => router.push("/app/RecipeDetails/")}>
-            <Text
-              onPress={() => router.push("../SeeMore/SeeMore")}
-              style={styles.seeMoreText}
-            >
-              See more
-            </Text>
+          <TouchableOpacity
+            onPress={() => nav.navigate("Seemore") }
+          >
+            <Text style={styles.seeMoreText}>See more</Text>
           </TouchableOpacity>
         </View>
 

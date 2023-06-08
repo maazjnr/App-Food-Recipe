@@ -1,50 +1,50 @@
 import React, { useState, useEffect } from "react";
-import { View, FlatList } from "react-native";
+import { View, FlatList, ActivityIndicator, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import HealthyCard from "../common/card/Healthy/HealthyCard";
-
-const apiUrl =
-  "https://api.spoonacular.com/recipes/random?apiKey=dc08124ff78a4ea9855372247525457d&number=1";
+import GetHealthyData from "../../Hook/getHealthyData";
+import GetData from "../../Hook/getData";
+import { COLORS } from "../../Constants/Constants";
+import styles from "./HealthyStyle";
 
 const Healthy = () => {
   const navigation = useNavigation();
 
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedJob, setSelectedJob] = useState(null);
+  const { error, data, isLoading } = GetHealthyData("recipes");
 
-  useEffect(() => {
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((res) => {
-        setData(res.recipes);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log("Error fetching data:", error);
-        setLoading(false);
-      });
-  }, []);
+  const handleCardPress = (item) => {
+    navigation.navigate("RecipeDetails", {
+      title: item.title,
+      img: item.image,
+      ingredientItem: item.extendedIngredients,
+      summary: item.summary,
+      instructionItem: item.instructions,
+      diet: item.diets,
+    });
+  };
 
   return (
     <View>
-      <FlatList
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        data={data}
-        renderItem={({ item }) => (
-          <HealthyCard
-            item={item}
-            handleCardPress={() =>
-              navigation.navigate("RecipeDetails", {
-                title: item.title,
-                img: item.image
-              })
-            }
-          />
-        )}
-        keyExtractor={(item) => item.id.toString()}
-      />
+      {isLoading ? (
+        <ActivityIndicator size="large" color={COLORS.primary} />
+      ) : error ? (
+        <Text style={styles.errorText}>
+          There's an error trying to fetch data
+        </Text>
+      ) : (
+        <FlatList
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          data={data}
+          renderItem={({ item }) => (
+            <HealthyCard
+              item={item}
+              handleCardPress={() => handleCardPress(item)}
+            />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+        />
+      )}
     </View>
   );
 };
