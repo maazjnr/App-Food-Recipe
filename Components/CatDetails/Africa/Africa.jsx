@@ -2,20 +2,36 @@ import { View, Text, ActivityIndicator, Image, ScrollView, TouchableOpacity } fr
 import React, { useState, useEffect } from "react";
 import GetData from "../../../Hook/getData";
 import styles from "./AfricaStyle";
+import { GetAfricaData } from "../../../Hook/getData";
+import { useNavigation } from "expo-router";
 
 const Africa = () => {
+
+  const navigation = useNavigation();
+
+  const handleCardPress = (item) => {
+    navigation.navigate("RecipeDetails", {
+      title: item.title,
+      img: item.image,
+      ingredientItem: item.extendedIngredients,
+      summary: item.summary,
+      instructionItem: item.instructions,
+      diet: item.diets,
+    });
+  };
   
-  const { data, isLoading, error } = GetData("recipes");
+  const { data, isLoading, error } = GetAfricaData("recipes");
+
   return (
 
      <ScrollView contentContainerStyle={styles.scrollContainer}>
-     {/* {isLoading ? (
+     {isLoading ? (
         <ActivityIndicator size="large" color="#000" />
       ) : error ? (
-        <Text>TGere's an error trying to fetchData</Text>
+        <Text>There's an error trying to fetchData</Text>
       ) : (
         data?.map((item) => (
-          <TouchableOpacity style={styles.foodBtn} key={item.id} >
+          <TouchableOpacity onPress={() => handleCardPress(item)} style={styles.foodBtn} key={item.id} >
             <Text style={styles.titleText}> {item.title} </Text>
             <Image
               source={{ uri: `${item.image}` }}
@@ -24,7 +40,7 @@ const Africa = () => {
             />
           </TouchableOpacity>
         ))
-      )} */}
+      )}
      </ScrollView>
 
   );

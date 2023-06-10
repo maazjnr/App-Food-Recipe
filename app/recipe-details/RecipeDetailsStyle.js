@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         alignContent: "center",
-        marginTop: SIZES.large * 2,
+        paddingTop: SIZES.large * 2,
+        backgroundColor: "#000"
 
     },
     
@@ -40,12 +41,12 @@ const styles = StyleSheet.create({
 
     summaryList: {
         fontSize: SIZES.xSmall * 1.5,
-        color: COLORS.gray,
+        color: COLORS.lightWhite,
         lineHeight: SIZES.xSmall * 2.5
     },
 
     ingredientText: {
-        color: COLORS.gray,
+        color: COLORS.lightWhite,
         textAlign: "left",
         marginBottom: SIZES.xSmall
     },

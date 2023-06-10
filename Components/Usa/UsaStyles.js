@@ -1,20 +1,29 @@
-import { SIZES, COLORS } from "../../Constants/Constants";
 import { StyleSheet } from "react-native";
-
-
+import { SIZES, COLORS } from "../../Constants/Constants";
 const styles = StyleSheet.create({
 
-    container: {
-        flexDirection: "column",
+    scrollContainer: {
+        flexGrow: 2,
         justifyContent: "center",
         alignItems: "center",
         alignContent: "center",
+
+    },
+
+    foodBtn: {
+        marginBottom: SIZES.xSmall
     },
     
     cardImage: {
         width: 400,
-        height: 250,
+        height: 220,
         borderRadius: SIZES.small,
+    },
+
+    textContainer: {
+        flexDirection: 'row',
+        justifyContent: "space-between",
+        alignItems: "center"
     },
 
     titleText: {
@@ -28,18 +37,8 @@ const styles = StyleSheet.create({
 
     cardBtn: {
         paddingEnd: SIZES.xSmall
-    },
-
-    RecipeText: {
-        fontSize: SIZES.large,
-        fontWeight: "600",
-        color: COLORS.secondary,
-        marginBottom: SIZES.xSmall,
-        marginTop: SIZES.large,
-        textAlign: "left"
-      },
-    
+    }
 
 });
 
-export default styles
+export default styles;

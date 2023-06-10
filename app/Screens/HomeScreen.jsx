@@ -9,6 +9,8 @@ import PopularFood from "../../Components/Popular/Popular";
 import Recipes from "../../Components/Recipes/Recipes";
 import Healthy from "../../Components/Healthy/Healthy";
 import { useNavigation } from "expo-router";
+import Wine from "../../Components/Wine/Wine";
+import SearchRecipes from "../Search/SearchRecipes";
 
 const HomeScreen = () => {
   const nav = useNavigation();
@@ -16,24 +18,27 @@ const HomeScreen = () => {
   return (
     <View style={styles.container}>
       <ScrollView>
+        
         <View style={styles.recContain}>
           <Text style={styles.RecipeText}>Healthy Plan</Text>
-          <TouchableOpacity
-            onPress={() => nav.navigate("Seemore") }
-          >
+          <TouchableOpacity onPress={() => nav.navigate("Seemore")}>
             <Text style={styles.seeMoreText}>See more</Text>
           </TouchableOpacity>
         </View>
+        
 
-        <Healthy />
+        {/* <Healthy />
 
-        {/* <Text style={styles.RecipeText}>Recommended for you</Text>
-      <PopularFood />
+        <Text style={styles.RecipeText}>Recommended for you</Text>
+        <PopularFood />
 
-      <Text style={styles.RecipeText}>Vegetarian</Text>
-      <Vegetarian /> */}
+        <Text style={styles.RecipeText}>Vegetarian</Text>
+        <Vegetarian />
 
-        {/* <Recipes /> */}
+        <Text style={styles.RecipeText}>Wines Recommended</Text>
+        <Wine />
+
+        <Recipes /> */}
       </ScrollView>
     </View>
   );

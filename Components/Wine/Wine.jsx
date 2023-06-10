@@ -7,37 +7,22 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useState, useEffect } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import styles from "./PopularStyle";
+import styles from "./WineStyle";
 import { useNavigation } from "expo-router";
 
 const apiUrl =
-  "https://api.spoonacular.com/recipes/random?apiKey=dc08124ff78a4ea9855372247525457d&number=3";
+  "https://api.spoonacular.com/food/wine/recommendation?apiKey=dc08124ff78a4ea9855372247525457d&wine=merlot&number=5";
 
-const PopularFood = () => { 
-
-  const navigation = useNavigation();
-
+const Wine = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  const handleCardPress = (item) => {
-    navigation.navigate("RecipeDetails", {
-      title: item.title,
-      img: item.image,
-      ingredientItem: item.extendedIngredients,
-      summary: item.summary,
-      instructionItem: item.instructions,
-      diet: item.diets,
-    });
-  };
 
   useEffect(() => {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((res) => {
-        setData(res.recipes);
+        setData(res.recommendedWines);
         setLoading(false);
       })
       .catch((error) => {
@@ -57,16 +42,17 @@ const PopularFood = () => {
     <View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {data.map((item) => (
-          <TouchableOpacity onPress={() => handleCardPress(item)} key={item.id} style={styles.cardBtn}>
+          <TouchableOpacity key={item.id} style={styles.cardBtn}>
             <Image
-              source={{ uri: `${item.image}` }}
-              resizeMode="cover"
+              source={{ uri: `${item.imageUrl}` }}
+              resizeMode="contain"
               style={styles.cardImage}
             />
 
             <View style={styles.textContainer}>
               <Text numberOfLines={10} style={styles.titleText}>
-                {renderTitle(item.title)}
+                {" "}
+                {renderTitle(item.title)}{" "}
               </Text>
               <MaterialCommunityIcons
                 name="dots-vertical"
@@ -81,4 +67,4 @@ const PopularFood = () => {
   );
 };
 
-export default PopularFood;
+export default Wine;

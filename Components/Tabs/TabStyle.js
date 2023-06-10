@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
   },
 
   linearStyle: {
-    width: 75,
-    height: 75,
-    borderRadius: 80,
+    width: 70,
+    height: 60,
+    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
   },

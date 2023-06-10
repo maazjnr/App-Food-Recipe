@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.large,
     fontWeight: "600",
     color: COLORS.secondary,
-    marginBottom: SIZES.xSmall
+    marginBottom: SIZES.large
   },
 
   seeMoreText: {

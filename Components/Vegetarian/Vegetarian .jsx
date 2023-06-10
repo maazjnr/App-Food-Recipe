@@ -10,26 +10,24 @@ import React, { useState, useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import styles from "../Vegetarian/VegetarianStyle";
-
-const apiUrl =
-  "https://api.spoonacular.com/recipes/random?apiKey=dc08124ff78a4ea9855372247525457d&number=3";
+import { GetVegetarianData } from "../../Hook/getData";
+import { useNavigation } from "expo-router";
 
 const Vegetarian = () => {
-  const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const navigation = useNavigation();
 
-  useEffect(() => {
-    fetch(apiUrl)
-      .then((response) => response.json())
-      .then((res) => {
-        setData(res.recipes);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log("Error fetching data:", error);
-        setLoading(false);
-      });
-  }, []);
+  const { error, data, isLoading } = GetVegetarianData("recipes");
+
+  const handleCardPress = (item) => {
+    navigation.navigate("RecipeDetails", {
+      title: item.title,
+      img: item.image,
+      ingredientItem: item.extendedIngredients,
+      summary: item.summary,
+      instructionItem: item.instructions,
+      diet: item.diets,
+    });
+  };
 
   const renderTitle = (title) => {
     if (title.length > 15) {
@@ -42,7 +40,11 @@ const Vegetarian = () => {
     <View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {data.map((item) => (
-          <TouchableOpacity key={item.id} style={styles.cardBtn}>
+          <TouchableOpacity
+            onPress={() => handleCardPress(item)}
+            key={item.id}
+            style={styles.cardBtn}
+          >
             <Image
               source={{ uri: `${item.image}` }}
               resizeMode="cover"

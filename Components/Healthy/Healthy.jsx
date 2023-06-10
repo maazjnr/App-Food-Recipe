@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { View, FlatList, ActivityIndicator, Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import HealthyCard from "../common/card/Healthy/HealthyCard";
-import GetHealthyData from "../../Hook/getHealthyData";
-import GetData from "../../Hook/getData";
+import GetHealthyData from "../../Hook/getData";
 import { COLORS } from "../../Constants/Constants";
 import styles from "./HealthyStyle";
+
 
 const Healthy = () => {
   const navigation = useNavigation();
