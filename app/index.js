@@ -11,18 +11,30 @@ import Profile from "./Screens/Profile/Profile";
 import RecipeDetails from "./recipe-details/RecipeDetails";
 import SeeMore from "./SeeMore/SeeMore";
 import { COLORS, SIZES } from "../Constants/Constants";
-
+import HomeHeaderRight from "../Components/HomeHeaderRight";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 const MainScreens = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerStatusBarHeight: 50,
+        // headerTitle: () => null,
+        headerStyle: {
+          backgroundColor: "#ffffff",
+        },
+        headerTitleStyle: {
+          color: COLORS.lightWhite,
+        },
+      }}
+    >
       <Stack.Screen
         name="HomeScreen"
         component={HomeScreen}
         options={{
-          header: () => <HomeHeader />,
+          headerRight: () => <HomeHeader />,
+          headerLeft: () => <HomeHeaderRight />,
         }}
       />
       <Stack.Screen
@@ -69,7 +81,7 @@ export default function Page() {
             <View style={{ alignItems: "center" }}>
               <Feather
                 name="home"
-                size={24}
+                size={20}
                 color={focused ? "#fb7d10" : "#000"}
               />
             </View>
@@ -86,7 +98,7 @@ export default function Page() {
             <View style={{ alignItems: "center" }}>
               <MaterialIcons
                 name="favorite"
-                size={24}
+                size={20}
                 color={focused ? "#fb7d10" : "#000"}
               />
             </View>
@@ -103,7 +115,7 @@ export default function Page() {
             <View style={{ alignItems: "center" }}>
               <FontAwesome
                 name="user"
-                size={24}
+                size={20}
                 color={focused ? "#fb7d10" : "#000"}
               />
             </View>

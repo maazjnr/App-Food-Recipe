@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.lightWhite,
     marginBottom: SIZES.xLarge,
-    marginTop: -40
   },
 
   RecipeText: {

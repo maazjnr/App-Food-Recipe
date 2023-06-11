@@ -5,26 +5,15 @@ const styles = StyleSheet.create({
   container: {
     padding: SIZES.xSmall,
     color: COLORS.gray,
-    flexDirection: "row",
-    paddingBottom: SIZES.xLarge * 1.5,
-    paddingTop: SIZES.xLarge * 1.5,
+    paddingBottom: SIZES.xLarge ,
+    paddingRight: SIZES.large
   },
 
-  inputText: {
-    borderWidth: 1,
-    borderColor: COLORS.primary,
-    padding: SIZES.xSmall,
-    width: "80%",
-    borderRadius: SIZES.xLarge,
-    height: SIZES.large * 3,
-    marginBottom: SIZES.xSmall * 2,
-    marginRight: SIZES.xSmall * 2,
-  },
 
   headerImage: {
-    width: 60,
-    height: 60,
-    borderRadius: 60,
+    width: 50,
+    height: 50,
+    borderRadius: 10,
   },
 });
 

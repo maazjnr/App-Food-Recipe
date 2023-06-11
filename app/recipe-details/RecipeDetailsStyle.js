@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         alignContent: "center",
         paddingTop: SIZES.large * 2,
-        backgroundColor: "#000"
+        backgroundColor: "#010203"
 
     },
     

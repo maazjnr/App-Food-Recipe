@@ -16,17 +16,19 @@ const HomeScreen = () => {
   const nav = useNavigation();
 
   return (
+    <ScrollView>
+
     <View style={styles.container}>
-      <ScrollView>
-        
-        <View style={styles.recContain}>
+
+      <SearchRecipes />
+              
+      <View style={styles.recContain}>
           <Text style={styles.RecipeText}>Healthy Plan</Text>
           <TouchableOpacity onPress={() => nav.navigate("Seemore")}>
             <Text style={styles.seeMoreText}>See more</Text>
           </TouchableOpacity>
         </View>
         
-
         {/* <Healthy />
 
         <Text style={styles.RecipeText}>Recommended for you</Text>
@@ -39,8 +41,9 @@ const HomeScreen = () => {
         <Wine />
 
         <Recipes /> */}
-      </ScrollView>
+  
     </View>
+    </ScrollView>
   );
 };
 
