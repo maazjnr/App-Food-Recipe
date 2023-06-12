@@ -8,8 +8,8 @@ import styles from "./HealthyStyle";
 
 
 const Healthy = () => {
-  const navigation = useNavigation();
 
+  const navigation = useNavigation();
   const { error, data, isLoading } = GetHealthyData("recipes");
 
   const handleCardPress = (item) => {
