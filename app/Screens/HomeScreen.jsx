@@ -29,7 +29,7 @@ const HomeScreen = () => {
           </TouchableOpacity>
         </View>
         
-        <Healthy />
+        {/* <Healthy />
 
         <Text style={styles.RecipeText}>Recommended for you</Text>
         <PopularFood />
@@ -40,7 +40,7 @@ const HomeScreen = () => {
         <Text style={styles.RecipeText}>Wines Recommended</Text>
         <Wine />
 
-        <Recipes />
+        <Recipes /> */}
   
     </View>
     </ScrollView>

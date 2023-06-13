@@ -12,6 +12,7 @@ import RecipeDetails from "./recipe-details/RecipeDetails";
 import SeeMore from "./SeeMore/SeeMore";
 import { COLORS, SIZES } from "../Constants/Constants";
 import HomeHeaderRight from "../Components/HomeHeaderRight";
+import ResultSearched from "./Search/ResultSearched";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -61,6 +62,22 @@ const MainScreens = () => {
           header: () => false,
         }}
         component={SeeMore}
+      />
+
+      <Stack.Screen
+        name="Results"
+        options={{
+          header: () => false,
+        }}
+        component={ResultSearched}
+      />
+
+      <Stack.Screen
+        name="SearchRecipes"
+        options={{
+          header: () => false,
+        }}
+        component={ResultSearched}
       />
     </Stack.Navigator>
   );
