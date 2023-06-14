@@ -6,11 +6,9 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: COLORS.primary,
     padding: SIZES.xSmall,
-    width: "100%",
+    width: 310,
     borderRadius: SIZES.small,
     height: SIZES.large * 3,
-    marginBottom: SIZES.xSmall * 1.5,
-    marginRight: SIZES.xSmall * 2,
     fontSize: SIZES.large - 5,
   },
 

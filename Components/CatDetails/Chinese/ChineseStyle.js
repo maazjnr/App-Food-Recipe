@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     },
     
     cardImage: {
-        width: 400,
+        width: 350,
         height: 220,
         borderRadius: SIZES.small,
     },

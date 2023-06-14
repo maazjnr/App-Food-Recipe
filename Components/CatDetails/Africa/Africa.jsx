@@ -21,7 +21,7 @@ const Africa = () => {
   };
   
   const { data, isLoading, error } = GetAfricaData("recipes");
-
+  
   return (
 
      <ScrollView contentContainerStyle={styles.scrollContainer}>

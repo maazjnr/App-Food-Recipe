@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
-import { SIZES, COLORS } from "../../../Constants/Constants";
+import { SIZES, COLORS } from "../../Constants/Constants";
+
 const styles = StyleSheet.create({
 
     scrollContainer: {
@@ -7,6 +8,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         alignContent: "center",
+        marginTop: SIZES.xxLarge
     },
 
     foodBtn: {
@@ -16,7 +18,7 @@ const styles = StyleSheet.create({
     cardImage: {
         width: 350,
         height: 220,
-        borderRadius: SIZES.small,
+        borderRadius: SIZES.small
     },
 
     textContainer: {
