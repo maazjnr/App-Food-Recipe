@@ -56,6 +56,7 @@ const MainScreens = () => {
         component={RecipeDetails}
       />
 
+
       <Stack.Screen
         name="Seemore"
         options={{

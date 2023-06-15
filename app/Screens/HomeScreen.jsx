@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./HomeScreens/HomeScreensStyle";
 import HomeRecipeCard from "../../Components/Healthy/Healthy";
 import { ScrollView, TouchableOpacity } from "react-native-gesture-handler";
-import { useRouter } from "expo-router";
 import Vegetarian from "../../Components/Vegetarian/Vegetarian ";
 import PopularFood from "../../Components/Popular/Popular";
 import Recipes from "../../Components/Recipes/Recipes";
@@ -11,13 +10,14 @@ import Healthy from "../../Components/Healthy/Healthy";
 import { useNavigation } from "expo-router";
 import Wine from "../../Components/Wine/Wine";
 import SearchRecipes from "../Search/SearchRecipes";
-import ResultSearched from "../Search/ResultSearched";
 
 const HomeScreen = () => {
+
   const nav = useNavigation();
 
   return (
-    <ScrollView>
+
+    <ScrollView contentContainerStyle={{backgroundColor: "#fff"}} >
       <View style={styles.container}>
         <SearchRecipes />
 
@@ -40,9 +40,13 @@ const HomeScreen = () => {
         <Wine />
 
         <Recipes /> */}
+
+
       </View>
     </ScrollView>
   );
+
 };
+
 
 export default HomeScreen;

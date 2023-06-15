@@ -5,6 +5,7 @@ import HTMLView from "react-native-htmlview";
 import { log } from "react-native-reanimated";
 
 const RecipeDetails = ({ route }) => {
+  
   const { title, img, ingredientItem, summary, instructionItem, diet } =
     route.params;
 

@@ -19,7 +19,6 @@ const Africa = () => {
       diet: item.diets,
     });
   };
-  
   const { data, isLoading, error } = GetAfricaData("recipes");
   
   return (

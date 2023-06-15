@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     },
     
     cardImage: {
-        width: 410,
+        width: 370,
         height: 300,
         borderRadius: SIZES.small,
     },
