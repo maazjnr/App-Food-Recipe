@@ -12,12 +12,11 @@ import Wine from "../../Components/Wine/Wine";
 import SearchRecipes from "../Search/SearchRecipes";
 
 const HomeScreen = () => {
-
+  
   const nav = useNavigation();
 
   return (
-
-    <ScrollView contentContainerStyle={{backgroundColor: "#fff"}} >
+    <ScrollView contentContainerStyle={{ backgroundColor: "#fff" }}>
       <View style={styles.container}>
         <SearchRecipes />
 
@@ -41,12 +40,9 @@ const HomeScreen = () => {
 
         <Recipes /> */}
 
-
       </View>
     </ScrollView>
   );
-
 };
-
 
 export default HomeScreen;
