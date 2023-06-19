@@ -6,6 +6,7 @@ import styles from "./ProfileStyle";
 import { COLORS } from "../../../Constants/Constants";
 
 const Profile = () => {
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.goBackContainer}>
@@ -46,6 +47,7 @@ const Profile = () => {
       </View>
     </SafeAreaView>
   );
+  
 };
 
 export default Profile;
