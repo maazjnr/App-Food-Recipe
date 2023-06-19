@@ -4,8 +4,7 @@ import { SIZES, COLORS } from "../../../Constants/Constants";
 const styles = StyleSheet.create({
 
   container: {
-    marginTop: SIZES.small * 2,
-    padding: SIZES.large,
+    padding: SIZES.large
   },
 
   profileContainer: {

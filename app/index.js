@@ -13,6 +13,7 @@ import SeeMore from "./SeeMore/SeeMore";
 import { COLORS, SIZES } from "../Constants/Constants";
 import HomeHeaderRight from "../Components/HomeHeaderRight";
 import ResultSearched from "./Search/ResultSearched";
+import ProfileHeader from "../Components/common/ProfileHeader/ProfileHeader";
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -89,7 +90,7 @@ export default function Page() {
     <Tab.Navigator
       screenOptions={{
         headerShadowVisible: false,
-        headerShown: false,
+        headerShown: true,
       }}
     >
       <Tab.Screen
@@ -122,6 +123,7 @@ export default function Page() {
             </View>
           ),
           tabBarLabel: () => null,
+          header: () => null,
         }}
         component={Favorite}
       />
@@ -139,9 +141,10 @@ export default function Page() {
             </View>
           ),
           tabBarLabel: () => null,
+          header: () => <ProfileHeader />
         }}
         component={Profile}
       />
     </Tab.Navigator>
   );
-}
+};
