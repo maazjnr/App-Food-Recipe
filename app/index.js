@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import TabNav from "../Navigation/TabNav";
@@ -106,12 +106,13 @@ export default function Page() {
             </View>
           ),
           tabBarLabel: () => null,
+          header: () => null,
         }}
         component={MainScreens}
       />
 
       <Tab.Screen
-        name="Fav"
+        name="Favorite recipes"
         options={{
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center" }}>
@@ -122,8 +123,20 @@ export default function Page() {
               />
             </View>
           ),
-          tabBarLabel: () => null,
-          header: () => null,
+          // tabBarLabel: () => null,
+          // header: () => null,
+          headerTitleStyle: {
+            color: COLORS.primary,
+            fontSize: SIZES.large - 3,
+          },
+          headerRight: () => {
+            return               <MaterialIcons
+            name="favorite"
+            size={20}
+            color={ "#fb7d10"}
+            style={{marginRight: SIZES.small}}
+          />
+          }
         }}
         component={Favorite}
       />

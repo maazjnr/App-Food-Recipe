@@ -2,9 +2,8 @@ import { StyleSheet } from "react-native";
 import { SIZES, COLORS } from "../../../Constants/Constants";
 
 const styles = StyleSheet.create({
-
   container: {
-    padding: SIZES.large
+    padding: SIZES.large,
   },
 
   profileContainer: {
@@ -28,7 +27,7 @@ const styles = StyleSheet.create({
   },
 
   userTextContainer: {
-    marginTop: SIZES.large ,
+    marginTop: SIZES.large,
     textAlign: "center",
     display: "flex",
     justifyContent: "center",
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    marginTop: SIZES.small -5,
+    marginTop: SIZES.small - 5,
     justifyContent: "space-evenly",
   },
 
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
     fontSize: SIZES.small * 1.5,
     fontWeight: "600",
     color: COLORS.gray2,
-    marginLeft: SIZES.small
+    marginLeft: SIZES.small,
   },
 
   image: {
@@ -86,11 +85,11 @@ const styles = StyleSheet.create({
     width: 350,
     height: 100,
     marginTop: SIZES.xxLarge,
-    borderRadius: SIZES.small * 2 - 5,
+    borderRadius: SIZES.small * 2 - 10,
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    flexDirection: "row"
+    flexDirection: "row",
   },
 
   transactionCard: {
@@ -102,21 +101,20 @@ const styles = StyleSheet.create({
   transactionText: {
     color: COLORS.white,
     fontSize: SIZES.small,
-    fontWeight: "600"
+    fontWeight: "600",
   },
 
   transactionNo: {
     color: COLORS.white,
     fontSize: SIZES.large * 2 - 6,
-    fontWeight: "700"
+    fontWeight: "700",
   },
 
   reviewCard: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-  }
-
+  },
 });
 
 export default styles;

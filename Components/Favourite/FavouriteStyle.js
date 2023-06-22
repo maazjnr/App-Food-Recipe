@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { SIZES, COLORS } from "../../Constants/Constants";
+
 const styles = StyleSheet.create({
   container: {
     marginTop: SIZES.xLarge - 15,
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
-    marginTop: SIZES.xLarge
+    marginTop: SIZES.xLarge,
   },
 
   image: {

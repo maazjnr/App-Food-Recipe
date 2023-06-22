@@ -16,7 +16,7 @@ const Favourite = () => {
           style={styles.image}
           source={require("../../Asset/chicken-fillet-1.jpg")}
         >
-          <Text style={styles.titleText}>Chicken Filet</Text>
+          <Text style={styles.titleText}>Chicken filet</Text>
         </ImageBackground>
 
         <ImageBackground
@@ -24,7 +24,7 @@ const Favourite = () => {
           style={styles.image}
           source={require("../../Asset/chicken-fillet-2.jpg")}
         >
-          <Text style={styles.titleText}>Chicken Filet</Text>
+          <Text style={styles.titleText}>Chicken filet</Text>
         </ImageBackground>
       </View>
 
@@ -34,7 +34,7 @@ const Favourite = () => {
           style={styles.image}
           source={require("../../Asset/chicken-fillet-3.jpg")}
         >
-          <Text style={styles.titleText}>Chicken Filet</Text>
+          <Text style={styles.titleText}>Chicken filet</Text>
         </ImageBackground>
 
         <ImageBackground
@@ -42,13 +42,13 @@ const Favourite = () => {
           style={styles.image}
           source={require("../../Asset/chicken-fillet-4.jpg")}
         >
-          <Text style={styles.titleText}>Chicken Filet</Text>
+          <Text style={styles.titleText}>Chicken filet</Text>
         </ImageBackground>
       </View>
 
       
     </View>
-    
+
   );
 };
 
