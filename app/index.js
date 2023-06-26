@@ -123,7 +123,7 @@ export default function Page() {
               />
             </View>
           ),
-          // tabBarLabel: () => null,
+          tabBarLabel: () => null,
           // header: () => null,
           headerTitleStyle: {
             color: COLORS.primary,
@@ -137,7 +137,10 @@ export default function Page() {
             style={{marginRight: SIZES.small}}
           />
           }
+
+          
         }}
+        
         component={Favorite}
       />
 

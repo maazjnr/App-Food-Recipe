@@ -9,7 +9,8 @@ const Favourite = () => {
   const navigation = useNavigation();
 
   const handleCardPress = (item) => {
-    navigation.navigate("RecipeDetails", {
+
+    navigation.navigate('RecipeDetails', {
       title: item.title,
       img: item.image,
       ingredientItem: item.extendedIngredients,
@@ -17,7 +18,9 @@ const Favourite = () => {
       instructionItem: item.instructions,
       diet: item.diets,
     });
+
   };
+
   const { data, isLoading, error } = GetData("recipes");
   
   return (
